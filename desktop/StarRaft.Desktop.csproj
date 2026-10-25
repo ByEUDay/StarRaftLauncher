@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>StarRaftLauncher</AssemblyName>
+    <RootNamespace>StarRaft.Desktop</RootNamespace>
+    <Version>0.1.0</Version>
+    <Product>StarRaftLauncher</Product>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <ApplicationIcon Condition="Exists('Assets/icon.ico')">Assets/icon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="Assets/icon.png" CopyToOutputDirectory="PreserveNewest" Condition="Exists('Assets/icon.png')" />
+    <None Include="Assets/icon.ico" CopyToOutputDirectory="PreserveNewest" Condition="Exists('Assets/icon.ico')" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Photino：基于系统 WebView（WebView2 / WKWebView / WebKitGTK）的跨平台窗口 -->
+    <PackageReference Include="Photino.NET" Version="3.*" />
+  </ItemGroup>
+
+</Project>
